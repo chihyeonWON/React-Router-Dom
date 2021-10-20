@@ -40,7 +40,7 @@ function App() {
         <li><a href="/topics">Topics</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
-      <Route path="/"><Home></Home></Route>
+      <Route exact path="/"><Home></Home></Route>
       <Route path="/topics"><Topics></Topics></Route>
       <Route path="/contact"><Contact></Contact></Route>
     </div>
