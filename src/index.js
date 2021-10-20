@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function Home() {
   return ( 
@@ -35,9 +35,9 @@ function App() {
   return (
     <div>
       <h1>React Router Dom Example</h1>
-      <Home></Home>
-      <Topics></Topics>
-      <Contact></Contact>
+      <Route><Home></Home></Route>
+      <Route><Topics></Topics></Route>
+      <Route><Contact></Contact></Route>
     </div>
   );
 }
