@@ -41,9 +41,9 @@ function App() {
         <li><a href="/contact">Contact</a></li>
       </ul>
       <Switch>
-        <Route path="/"><Home></Home></Route>
         <Route path="/topics"><Topics></Topics></Route>
         <Route path="/contact"><Contact></Contact></Route>
+        <Route path="/"><Home></Home></Route>
       </Switch>
     </div>
   );
