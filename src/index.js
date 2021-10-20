@@ -44,6 +44,7 @@ function App() {
         <Route exact path="/"><Home></Home></Route>
         <Route path="/topics"><Topics></Topics></Route>
         <Route path="/contact"><Contact></Contact></Route>
+        <Route path="/">Not Found</Route>
       </Switch>
     </div>
   );
