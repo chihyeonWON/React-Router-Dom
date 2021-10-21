@@ -13,14 +13,22 @@ function Home() {
   );
 }
 
+var contents = [
+  {id:1, title:'HTML', description:'HTML is ...'},
+  {id:2, title:'JS', description:'JS is ...'},
+  {id:3, title:'React', description:'React is ...'}
+];
+
 function Topics() {
+  var lis = [];
+  for(var i=0; i<contents.length; i++) {
+    lis.push(<li><NavLink to={'/topics/'+contents[i].id}>{contents[i].title}</NavLink></li>)
+  }
   return ( 
     <div>
       <h2>Topics</h2>
       <ul>
-        <li><NavLink to="/Topics/1">HTML</NavLink></li>
-        <li><NavLink to="/Topics/2">JS</NavLink></li>
-        <li><NavLink to="/Topics/3">React</NavLink></li>
+        {lis}
       </ul>
       <switch>
         <Route path="/Topics/1">HTML is ...</Route>
