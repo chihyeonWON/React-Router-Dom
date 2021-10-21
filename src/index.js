@@ -36,7 +36,7 @@ function App() {
     <div>
       <h1>React Router Dom Example</h1>
       <ul>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink exact to="/">Home</NavLink></li>
         <li><NavLink to="/topics">Topics</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
