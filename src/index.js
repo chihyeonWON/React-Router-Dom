@@ -19,11 +19,20 @@ var contents = [
   {id:3, title:'React', description:'React is ...'}
 ];
 
+function Topic() {
+  return (
+    <div>
+    <h3>Topic</h3>
+    Topic is ...
+  </div>
+  );
+}
+
 function Topics() {
   var lis = [];
   for(var i=0; i<contents.length; i++) {
     lis.push(<li><NavLink to={'/topics/'+contents[i].id}>{contents[i].title}</NavLink></li>)
-  }
+    }
   return ( 
     <div>
       <h2>Topics</h2>
@@ -57,12 +66,9 @@ function App() {
         <li><NavLink to="/topics">Topics</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
-      <Switch>
-        <Route exact path="/"><Home></Home></Route>
-        <Route path="/topics"><Topics></Topics></Route>
-        <Route path="/contact"><Contact></Contact></Route>
-        <Route path="/">Not Found</Route>
-      </Switch>
+      <Route path="/topics/:topic_id">
+        <Topic></Topic>
+      </Route>
     </div>
   );
 }
