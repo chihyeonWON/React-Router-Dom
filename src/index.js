@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { HashRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 function Home() {
   return ( 
@@ -66,9 +66,11 @@ function App() {
         <li><NavLink to="/topics">Topics</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
-      <Route path="/topics/:topic_id">
-        <Topic></Topic>
-      </Route>
+      <Switch>
+        <Route exact path="/"><Home></Home></Route>
+        <Route path="/topics"><Topics></Topics></Route>
+        <Route path="/contact"><Contact></Contact></Route>
+      </Switch>
     </div>
   );
 }
