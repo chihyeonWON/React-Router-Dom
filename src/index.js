@@ -39,11 +39,9 @@ function Topics() {
       <ul>
         {lis}
       </ul>
-      <switch>
-        <Route path="/Topics/1">HTML is ...</Route>
-        <Route path="/Topics/2">JS is ...</Route>
-        <Route path="/Topics/3">React is ...</Route>
-      </switch>
+      <Route path="/topics/:topic_id">
+        <Topic></Topic>
+      </Route>
     </div>
   );
 }
