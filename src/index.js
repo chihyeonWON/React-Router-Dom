@@ -17,7 +17,16 @@ function Topics() {
   return ( 
     <div>
       <h2>Topics</h2>
-      Topics...
+      <ul>
+        <li><NavLink to="/Topics/1">HTML</NavLink></li>
+        <li><NavLink to="/Topics/2">JS</NavLink></li>
+        <li><NavLink to="/Topics/3">React</NavLink></li>
+      </ul>
+      <switch>
+        <Route path="/Topics/1">HTML is ...</Route>
+        <Route path="/Topics/2">JS is ...</Route>
+        <Route path="/Topics/3">React is ...</Route>
+      </switch>
     </div>
   );
 }
