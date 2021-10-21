@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter, Route, NavLink, Switch } from 'react-router-dom';
+import { HashRouter, Route, NavLink, Switch, useParams } from 'react-router-dom';
 
 function Home() {
   return ( 
@@ -20,10 +20,21 @@ var contents = [
 ];
 
 function Topic() {
+  var params = useParams();
+  var topic_id = params.topic_id;
+  var selected_topic = {
+    title:'Sorry', description:'Not Found'
+  };
+  for(var i=0; i<contents.length; i++) {
+    if(contents[i].id === Number(topic_id)) {
+      selected_topic = contents[i];
+      break;
+    }
+  }
   return (
     <div>
-    <h3>Topic</h3>
-    Topic is ...
+    <h3>{selected_topic.title}</h3>
+    {selected_topic.description}
   </div>
   );
 }
